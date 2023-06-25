@@ -27,7 +27,7 @@
    width: 20%;
  }
  .navbar-left ul,
- .navbar-right ul {
+ .navbar-carrito ul {
    list-style: none;
    padding: 0;
    margin: 0;
@@ -42,7 +42,7 @@
    margin-left: 12px;
  }
  .navbar-left ul li a,
- .navbar-right ul li a {
+ .navbar-carrito ul li a {
    text-decoration: none;
    color: var(--very-light-pink);
    border: 1px solid var(--white);
@@ -50,7 +50,7 @@
    border-radius: 8px;
  }
  .navbar-left ul li a:hover,
- .navbar-right ul li a:hover {
+ .navbar-carrito ul li a:hover {
    border: 1px solid var(--hospital-green);
    color: var(--hospital-green);
  }

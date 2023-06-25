@@ -1,8 +1,11 @@
+import CartWindget from "../CartWidget/CartWidget";
+import LogoHeader from "../LogoHeader/LogoHeader";
+
 const NavBar = () => {
   return (
     <nav>
       <div class="navbar-left">
-        <img src={process.env.PUBLIC_URL + "/img/logo.png"} alt="logo" class="logo"></img>
+         <LogoHeader/>
         <ul>
           <li>
             <a href="/">Bicicletas</a>
@@ -15,17 +18,7 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-
-      <div class="navbar-right">
-        <ul>
-          <li class="navbar-shopping-cart">
-            <img
-              src={process.env.PUBLIC_URL + "/img/carrito.png"}
-              alt="carrito de compras"
-            />
-          </li>
-        </ul>
-      </div>
+      <CartWindget/>
     </nav>
   );
 };
