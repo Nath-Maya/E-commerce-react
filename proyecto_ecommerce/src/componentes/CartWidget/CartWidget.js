@@ -2,10 +2,10 @@ import carrito from "./assets/carrito.png";
 
 const CartWindget = () => {
   return (
-    <div class="navbar-carrito">
+    <div className="navbar-carrito">
       <ul>
-        <li class="navbar-shopping-cart">
-          <img class="navbar-shopping-cart" src={carrito} alt="carrito de compras" />
+        <li className="navbar-shopping-cart">
+          <img className="navbar-shopping-cart" src={carrito} alt="carrito de compras" />
           0
         </li>
       </ul>

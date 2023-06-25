@@ -4,7 +4,7 @@ import LogoHeader from "../LogoHeader/LogoHeader";
 const NavBar = () => {
   return (
     <nav>
-      <div class="navbar-left">
+      <div className="navbar-left">
          <LogoHeader/>
         <ul>
           <li>
