@@ -1,12 +1,12 @@
-//Apuntes
-//
+import NavBar from "./componentes/NavBar/NavBar";
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <h1>hola mundo</h1>
+      <NavBar/>
 
     </div>
   );
