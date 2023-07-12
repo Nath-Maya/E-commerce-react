@@ -1,17 +1,4 @@
-:root {
-   --white: #FFFFFF;
-   --black: #000000;
-   --very-light-pink: #C7C7C7;
-   --text-input-field: #F7F7F7;
-   --hospital-green: #1dd4f5;
-   --sm: 14px;
-   --md: 16px;
-   --lg: 18px;
- }
- body {
-   margin: 0;
-   font-family: 'Quicksand', sans-serif;
- }
+@import url(./root.css);
 
  nav {
    display: flex;
@@ -51,8 +38,8 @@
  }
  .navbar-left ul li a:hover,
  .navbar-carrito ul li a:hover {
-   border: 1px solid var(--hospital-green);
-   color: var(--hospital-green);
+   border: 1px solid var(--border-bottons);
+   color: var(--border-bottons);
  }
  .navbar-email {
    color: var(--very-light-pink);
@@ -68,7 +55,7 @@
  .navbar-shopping-cart div {
    width: 16px;
    height: 16px;
-   background-color: var(--hospital-green);
+   background-color: var(--border-bottons);
    border-radius: 50%;
    font-size: var(--sm);
    font-weight: bold;

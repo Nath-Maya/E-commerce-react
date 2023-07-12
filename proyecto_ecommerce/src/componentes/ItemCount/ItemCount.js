@@ -1,4 +1,3 @@
-import './ItemCount.css'
 import { useState } from 'react'
 
 //Estado donde se almacenara la cantidad del contador
@@ -23,6 +22,17 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
    //! Elemento que se retornara
 
+   return (
+     <div className="container-counter">
+       <h1 className="number-counter"> {quantity} </h1>
+       <div className="controls-counter">
+         <button className="counter-button" onClick={decrement}> - </button>
+         <button className="counter-button onAdd" onClick={() => onAdd(quantity)} disabled={!stock}> Agregar al carrito </button>
+         <button className="counter-button" onClick={increment}> + </button>
+       </div>
+     </div>
+   );
 
+};
 
-}
+export default ItemCount
