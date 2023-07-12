@@ -8,6 +8,9 @@
    justify-content: center;
    align-items: center;
    font-family: 'Quicksand', sans-serif;
+   background-color: var(--very-light-pink);
+   border-radius: 5px;
+   padding: 8px;
 }
 
 .controls-counter {
