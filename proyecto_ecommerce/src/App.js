@@ -1,6 +1,6 @@
 import NavBar from "./componentes/NavBar/NavBar";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
-import ItemCount from "./componentes/ItemCount/ItemCount"
+import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
 
 
 
@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer greeting={greeting}/>
-      <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log("Cantidad Agregada ",quantity)}/>
+      <ItemListContainer greeting={"Bienvenidos a Wonder Bike"}/>
+      <ItemDetailContainer/>
     </div>
   );
 }
