@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { getProducts } from '../asyncMock';
+import ItemList from '../ItemList/ItemList';
 
 
 
 function ItemListContainer({greeting}) {
-   return <h1>{props.greeting}</h1>;
 
    const  [productos,setProductos] = useState([])
 
