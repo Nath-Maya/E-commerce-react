@@ -61,3 +61,12 @@ export const getProductById = (productId) => {
       }, 500);
    });
 }
+
+export const getProductsByCategory = (categoryId) => {
+   return new Promise((resolve) => {
+     setTimeout(() => {
+       const filteredProducts = productos.filter((prod) => prod.categoria === categoryId);
+       resolve(filteredProducts);
+     }, 500);
+   });
+ };
