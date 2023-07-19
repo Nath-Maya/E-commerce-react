@@ -57,8 +57,9 @@ export const getProducts = () => {
 export const getProductById = (productId) => {
    return new Promise((resolve) => {
       setTimeout(() => {
-         resolve(productos.find(prod => prod.id === productId));
-      }, 500);
+         const producto = productos.find(prod => prod.id === productId);
+         resolve(producto);
+      }, 200);
    });
 }
 

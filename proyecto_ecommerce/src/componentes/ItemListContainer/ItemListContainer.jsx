@@ -1,14 +1,13 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getProducts, getProductsByCategory } from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom'
 
 
 
-function ItemListContainer({greeting}) {
+function ItemListContainer(props) {
    //Estado donde se almacenaran los productos obtenidos de AsyncMock
-   const  [productos,setProductos] = useState([])
+   const  [products,setProducts] = useState([])
    //Obtener el parametro categoryId de la URL 
    const { categoryId } = useParams()
    // Cargar los productos al montar el componente o cuando cambia categoryId
@@ -17,7 +16,7 @@ function ItemListContainer({greeting}) {
 
       asyncFunc(categoryId)
          .then(response => {
-            setProductos(response)
+            setProducts(response)
          })
          .catch(error => {
              console.error(error);
@@ -26,8 +25,8 @@ function ItemListContainer({greeting}) {
 
    return (
       <div>
-         <h1>{greeting}</h1>
-         <ItemList productos = {productos}/>
+         <h1>{props.greeting}</h1>
+         <ItemList products = {products}/>
       </div>
       )
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import ItemCount from "../ItemCount/ItemCount"
 
 const ItemDetail = ({id,name,price,categoria,img,stock,description}) => {
