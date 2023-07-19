@@ -15,9 +15,7 @@ const ItemDetail = ({id,name,price,categoria,img,stock,description}) => {
          <p>
             {categoria}
          </p>
-         <p>
-            {img}
-         </p>
+         <img src={img} alt={name} />
          <p>
             {stock}
          </p>

@@ -6,8 +6,6 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 
 function App() {
 
-  const greeting = "Bienvenido a Wonder Bike";
-
   return (
     <div className="App">
       <NavBar/>

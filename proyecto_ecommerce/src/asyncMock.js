@@ -4,7 +4,7 @@ const productos = [
       "name": "Bicicleta Gt Avalanche Comp 2022",
       "price": 599.99,
       "categoria": "Bicicleta",
-      "img": "proyecto_ecommerce/public/img/bici1.jpeg",
+      "img": "https://assets.specialized.com/i/specialized/91522-55_ROCKHOPPER-COMP-29-REDWD-SMK_HERO?bg=rgb(241,241,241)&w=1600&h=900&fmt=auto",
       "stock": 10,
       "description": "El cuadro de aluminio liviano presenta el diseño Triple Triangle de GT para un manejo preciso, con una transmisión 1×10 para cambios suaves y simplificados y una horquilla de 100 mm de recorrido para reducir la vibración del sendero y aumentar el control de tracción."
     },
