@@ -6,12 +6,12 @@ const NavBar = () => {
   return (
     <nav>
       <div className="navbar-left">
-         <Link to='/'>
-         <LogoHeader/>
+         <Link to={'/'}>
+          <LogoHeader/>
          </Link>
         <ul>
-          <NavLink to={`/category/Bicicletas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Bicicletas</NavLink>
-          <NavLink to={`/category/Accesorios`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Accesorios</NavLink>
+          <NavLink to={`/categoria/Bicicletas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Bicicletas</NavLink>
+          <NavLink to={`/categoria/Accesorios`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Accesorios</NavLink>
         </ul>
       </div>
       <CartWindget/>
