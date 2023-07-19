@@ -1,12 +1,13 @@
 
-const Item = ({id,name,price,categoria,img}) => {
+const Item = ({id,name,img,price,stock}) => {
    return (
       <div>
          <div>{name}</div>
          <div>{id}</div>
          <div>{price}</div>
-         <div>{categoria}</div>
-         <div>{img}</div> 
+         <div>{img}</div>
+         <div>{stock}</div>
+         <Link to={`/item/${id}`} className="option">Ver detalle</Link>
       </div>
       )
 }

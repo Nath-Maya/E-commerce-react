@@ -9,6 +9,8 @@ function ItemListContainer({greeting}) {
 
    const  [productos,setProductos] = useState([])
 
+   
+
    useEffect(() => {
       getProducts()
          .then(response => {
