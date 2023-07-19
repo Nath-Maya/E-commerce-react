@@ -1,6 +1,10 @@
 import ItemCount from "../ItemCount/ItemCount"
 
 const ItemDetail = ({id,name,price,categoria,img,stock,description}) => {
+   //Convertir price en pesos
+   const formatoPrecio= price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' });
+
+
    return (
       <div className="card-item">
          <p>
@@ -10,7 +14,7 @@ const ItemDetail = ({id,name,price,categoria,img,stock,description}) => {
             {name}
          </p>
          <p>
-            {price}
+            {formatoPrecio}
          </p>
          <p>
             {categoria}
