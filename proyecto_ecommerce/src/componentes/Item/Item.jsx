@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 
 const Item = ({id,name,img,price}) => {
 
-   const formatoPrecio= price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })
+  let formatoPrecio= price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })
 
    return (
       <Card style={{ width: '16rem' }}>
@@ -16,9 +16,9 @@ const Item = ({id,name,img,price}) => {
          <Card.Text>
             {formatoPrecio}
          </Card.Text>
-         <Link to={`/item/${id}`}>
-            <Button variant="outline-info">Ver detalles</Button>
-         </Link>
+         <Link to={`/item/${id}`} className="option">
+          <Button variant="outline-info">Ver detalles</Button>
+        </Link>
          </Card.Body>
     </Card>
 )

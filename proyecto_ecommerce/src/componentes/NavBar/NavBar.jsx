@@ -3,6 +3,9 @@ import LogoHeader from "../LogoHeader/LogoHeader";
 import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
+
+  console.log("Entre")
+
   return (
     <nav>
       <div className="navbar-left">
@@ -10,8 +13,8 @@ const NavBar = () => {
           <LogoHeader/>
          </Link>
         <ul>
-          <NavLink to={`/categoria/Bicicletas`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Bicicletas</NavLink>
-          <NavLink to={`/categoria/Accesorios`} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>Accesorios</NavLink>
+          <NavLink to={`/categoria/Bicicletas`}>Bicicletas</NavLink>
+          <NavLink to={`/categoria/Accesorios`}>Accesorios</NavLink>
         </ul>
       </div>
       <CartWindget/>

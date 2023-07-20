@@ -55,18 +55,19 @@ export const getProducts = () => {
 }
 
 export const getProductById = (productoId) => {
+   console.log("entre productByID")
    return new Promise((resolve) => {
       setTimeout(() => {
-         resolve(productos.find(prod => prod.id === productoId))
-      }, 2000);
+         resolve(productos.find((prod) => prod.id == productoId))
+      }, 500);
    });
 }
 
 export const getProductsByCategory = (categoriaProducto) => {
+   console.log("entre categoria")
    return new Promise((resolve) => {
      setTimeout(() => {
-       const filteredProducts = productos.filter((prod) => prod.categoria === categoriaProducto);
-       resolve(filteredProducts);
-     }, 2000);
+       resolve(productos.filter((prod) => prod.categoria == categoriaProducto));
+     }, 500);
    });
  };
