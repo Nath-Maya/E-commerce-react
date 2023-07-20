@@ -16,7 +16,7 @@ const Item = ({id,name,img,price}) => {
          <Card.Text>
             {formatoPrecio}
          </Card.Text>
-         <Link to={`/item/${id}`} className="option">
+         <Link to={`/item/${id}`}>
             <Button variant="outline-info">Ver detalles</Button>
          </Link>
          </Card.Body>

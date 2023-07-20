@@ -54,20 +54,19 @@ export const getProducts = () => {
    });
 }
 
-export const getProductById = (productId) => {
+export const getProductById = (productoId) => {
    return new Promise((resolve) => {
       setTimeout(() => {
-         const producto = productos.find(prod => prod.id === productId);
-         resolve(producto);
-      }, 200);
+         resolve(productos.find(prod => prod.id === productoId))
+      }, 2000);
    });
 }
 
-export const getProductsByCategory = (categoryId) => {
+export const getProductsByCategory = (categoriaProducto) => {
    return new Promise((resolve) => {
      setTimeout(() => {
-       const filteredProducts = productos.filter((prod) => prod.categoria === categoryId);
+       const filteredProducts = productos.filter((prod) => prod.categoria === categoriaProducto);
        resolve(filteredProducts);
-     }, 500);
+     }, 2000);
    });
  };

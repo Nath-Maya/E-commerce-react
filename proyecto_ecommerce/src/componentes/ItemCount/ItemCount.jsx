@@ -20,6 +20,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
       };
    };
 
+   function addCar() {
+      onAdd(quantity)
+   }
+
    //! Elemento que se retornara
 
    return (
@@ -27,7 +31,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
        <h1 className="number-counter"> {quantity} </h1>
        <div className="controls-counter">
          <button className="counter-button" onClick={decrement}> - </button>
-         <button className="counter-button onAdd" onClick={() => onAdd(quantity)} disabled={!stock}> Agregar al carrito </button>
+         <button className="counter-button onAdd" onClick={addCar} disabled={!stock}> Agregar al carrito </button>
          <button className="counter-button" onClick={increment}> + </button>
        </div>
      </div>

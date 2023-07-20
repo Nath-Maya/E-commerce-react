@@ -8,17 +8,17 @@ const ItemDetailContainer = () => {
 
    const [product, setProduct] = useState(null)
    //Obtener el itemId de la URL
-   const { productId } = useParams()
+   const { productoId } = useParams();
 
    useEffect(() => {
-      getProductById(productId)
+      getProductById(productoId)
          .then(response => {
             setProduct(response)
          })
          .catch(error => {
             console.error(error)
          })
-   }, [productId])
+   }, [productoId])
 
    return (
       <div className="item-detail-container">
