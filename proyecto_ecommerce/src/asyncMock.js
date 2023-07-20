@@ -27,7 +27,7 @@ const productos = [
       "description": "Se ha desarrollado para ciclistas que buscan grandes golpes y mucha gravedad, el Force 29 Elite está diseñado para la emoción. Con la suspensión de Fox y Marzocchi y una transmisión SRAM Eagle."
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Casco Met Trenta Tips",
       "price": 1090000,
       "categoria": "Accesorios",
@@ -36,7 +36,7 @@ const productos = [
       "description": "Con el sistema de protección cerebral MIPS-C2®, el MET Trenta Mips puede deslizarse en relación con la cabeza en caso de choque, redirigiendo el movimiento de rotación dañino.."
     },
     {
-      "id": 3,
+      "id": 5,
       "name": "Zapatillas Giro",
       "price": 554000,
       "categoria": "Accesorios",
