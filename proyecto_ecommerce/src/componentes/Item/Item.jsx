@@ -1,18 +1,28 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
-const Item = ({id,name,img,price,categoria}) => {
+const Item = ({id,name,img,price,description}) => {
+
+   const formatoPrecio= price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })
+
    return (
-      <div>
-         <div>{name}</div>
-         <div>{id}</div>
-         <div>{price}</div>
-         <div>{img}</div>
-         <div>{categoria}</div>
-         <Link to={`/item/${id}`} className="option">Ver detalle</Link>
-      </div>
-      )
+      <Card style={{ width: '18rem' }}>
+         <Card.Img variant="top" src={img} />
+         <Card.Body>
+         <Card.Title>{name}</Card.Title>
+         <Card.Text>
+               {description}
+               {formatoPrecio}
+         </Card.Text>
+         <Link to={`/item/${id}`} className="option">
+            <Button variant="outline-info">Ver detalles</Button>
+         </Link>
+         </Card.Body>
+    </Card>
+)
 }
 
 export default Item
