@@ -30,8 +30,6 @@ const ItemDetail = ({id,name,price,categoria,img,stock,description}) => {
             <footer>
                <ItemCount/>
             </footer>
-
-
       </div>
       )
 }
