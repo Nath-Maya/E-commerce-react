@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 //Estado donde se almacenara la cantidad del contador
 const ItemCount = ({stock, initial, onAdd}) => {
@@ -27,14 +29,12 @@ const ItemCount = ({stock, initial, onAdd}) => {
    //! Elemento que se retornara
 
    return (
-     <div className="container-counter">
-       <h1 className="number-counter"> {stock} </h1>
-       <div className="controls-counter">
-         <button className="counter-button" onClick={decrement}> - </button>
-         <button className="counter-button onAdd" onClick={addCar} disabled={!stock}> Agregar al carrito </button>
-         <button className="counter-button" onClick={increment}> + </button>
-       </div>
-     </div>
+
+   <ButtonGroup aria-label="Basic example">
+      <Button variant="secondary" onClick={decrement}> - </Button>
+      <Button variant="secondary" onClick={addCar} disabled={!stock}>Añadir al Carrito</Button>
+      <Button variant="secondary" onClick={increment}> + </Button>
+    </ButtonGroup>
    );
 
 };
