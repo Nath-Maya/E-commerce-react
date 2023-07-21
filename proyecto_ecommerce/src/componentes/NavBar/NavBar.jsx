@@ -1,22 +1,18 @@
+import React from "react";
 import CartWindget from "../CartWidget/CartWidget";
 import LogoHeader from "../LogoHeader/LogoHeader";
 import { NavLink, Link } from "react-router-dom";
 
-const NavBar = () => {
 
-  console.log("Entre")
+const NavBar = () => {
 
   return (
     <nav>
-      <div className="navbar-left">
          <Link to={'/'}>
           <LogoHeader/>
          </Link>
-        <ul>
-          <NavLink to={`/categoria/Bicicletas`}>Bicicletas</NavLink>
-          <NavLink to={`/categoria/Accesorios`}>Accesorios</NavLink>
-        </ul>
-      </div>
+         <NavLink to="/category/Accesorios">Accesorios</NavLink>
+         <NavLink to="/category/Bicicletas">Bicicletas</NavLink>
       <CartWindget/>
     </nav>
   );
