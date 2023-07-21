@@ -10,8 +10,8 @@ import './NavBar.css'
 const NavBar = () => {
 
   return (
-    <Nav variant="underline" defaultActiveKey="/home">
-      <Link to={'/'}>
+    <Nav className="header" variant="underline" defaultActiveKey="/home">
+      <Link to={'/'} className="logo-header">
           <LogoHeader/>
       </Link>
       <Nav.Item>
@@ -29,7 +29,7 @@ const NavBar = () => {
         <NavLink  className="navLink"to="/category/Bicicletas">Bicicletas</NavLink>
         </Nav.Link>
       </Nav.Item>
-      <Nav.Item>
+      <Nav.Item className="item-car">
         <CartWidget/>
       </Nav.Item>
      
