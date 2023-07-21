@@ -1,16 +1,10 @@
 import carrito from "./assets/carrito.png";
+import "./assets/CartWidget.css"
 
-const CartWindget = () => {
+const CartWidget = () => {
   return (
-    <div className="navbar-carrito">
-      <ul>
-        <li className="navbar-shopping-cart">
-          <img className="navbar-shopping-cart" src={carrito} alt="carrito de compras" />
-          0
-        </li>
-      </ul>
-    </div>
+          <img className="CartWidget" src={carrito} alt="carrito de compras" />
   );
 };
 
-export default CartWindget;
+export default CartWidget;
