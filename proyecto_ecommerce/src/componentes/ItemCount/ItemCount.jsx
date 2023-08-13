@@ -34,7 +34,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
    <ListGroup.Item>Cantidad: {quantity}</ListGroup.Item>
    <ButtonGroup aria-label="Basic example">
       <Button variant="secondary" onClick={decrement}> - </Button>
-      <Button variant="secondary" onClick={addCar} disabled={!stock}>Añadir al Carrito</Button>
+      <Button variant="info" onClick={addCar} disabled={!stock}>Añadir al Carrito</Button>
       <Button variant="secondary" onClick={increment}> + </Button>
     </ButtonGroup>
    </div>
