@@ -5,15 +5,24 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { useState } from "react";
 import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-const ItemDetail = ({name,price,categoria,img,stock,description}) => {
-  
-  console.log({name,price,categoria,img,stock,description})
+const ItemDetail = ({id,name,price,categoria,img,stock,description}) => {
 
   const [quantityAdded, setQuantityAdded] = useState(0);
 
+  const { addItem } = useContext(CartContext)
+
   const onAdd = (quantity) => {
     setQuantityAdded(quantity)
+
+    const item = {
+      id, name, price
+    }
+
+
+    addItem(item, quantity)
   }
 
    return (
@@ -41,9 +50,6 @@ const ItemDetail = ({name,price,categoria,img,stock,description}) => {
     </Card.Body>
 
   </Card>
-
-     
-
 )
 }
 
