@@ -2,14 +2,19 @@ import React from "react";
 import ItemCount from "../ItemCount/ItemCount"
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { useState } from "react";
+import { Link } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
 
 const ItemDetail = ({name,price,categoria,img,stock,description}) => {
   
-   console.log({name,price,categoria,img,stock,description})
+  console.log({name,price,categoria,img,stock,description})
 
-   const onAdd = () => {
+  const [quantityAdded, setQuantityAdded] = useState(0);
 
-   }
+  const onAdd = (quantity) => {
+    setQuantityAdded(quantity)
+  }
 
    return (
     <Card style={{ width: '18rem' }}>
@@ -26,7 +31,13 @@ const ItemDetail = ({name,price,categoria,img,stock,description}) => {
       <ListGroup.Item>Precio: ${price} </ListGroup.Item>
     </ListGroup>
     <Card.Body>
-    <ItemCount initial={1} stock={stock} onAdd={onAdd}/>
+      {
+        quantityAdded > 0 ? 
+        (<Link to= '/cart' className='Option'>
+          <Button variant="outline-info">Terminar Compra</Button>
+          </Link>) : 
+          (<ItemCount initial={1} stock={stock} onAdd={onAdd}/>)
+      }
     </Card.Body>
 
   </Card>
