@@ -5,6 +5,10 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import { CarritoCompras } from './componentes/context/CartContext';
+import Cart from './componentes/Cart/Cart';
+
+
+
 
 
 function App() {
@@ -18,6 +22,7 @@ function App() {
           <Route path='/' element={ <ItemListContainer greeting="Bienvenido a Wonder Bike"/>}/>
           <Route path="/category/:categoryId" element={<ItemListContainer/>} />
           <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+          <Route path='/cart' element={<Cart/>} />
           <Route path='*' element={<h1>404 NOT FOUND ERROR</h1>}/>
         </Routes>
         </CarritoCompras>
