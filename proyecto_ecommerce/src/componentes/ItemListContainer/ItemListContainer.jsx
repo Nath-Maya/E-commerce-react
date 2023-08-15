@@ -13,7 +13,6 @@ function ItemListContainer(props) {
    const { categoryId } = useParams()
    // Cargar los productos al montar el componente o cuando cambia categoryId
    useEffect(() => {
-      console.log("esto es la categoria: " + categoryId)
       if (categoryId) {
       
       getProductsByCategory(categoryId)

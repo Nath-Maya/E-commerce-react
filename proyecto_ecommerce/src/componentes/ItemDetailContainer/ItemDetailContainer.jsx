@@ -13,7 +13,6 @@ const ItemDetailContainer = () => {
    const { itemId }   = useParams();
 
    useEffect(() => {
-      console.log("soy itemID: " + itemId)
       getProductById(itemId)
         .then((response) => {
           setProduct(response);
