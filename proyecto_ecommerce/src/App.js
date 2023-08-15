@@ -17,7 +17,7 @@ function App() {
 
       <BrowserRouter>
         <CarritoCompras>
-          <NavBar/>
+          <NavBar />
             <Routes>
               <Route path='/' element={ <ItemListContainer greeting="Bienvenido a Wonder Bike"/>}/>
               <Route path="/category/:categoryId" element={<ItemListContainer/>} />
