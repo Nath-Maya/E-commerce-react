@@ -25,7 +25,6 @@ const Cart = () => {
          )
    }
 
- console.log("El total es: " + total)
    return (
       <div>
          {cart.map(p => <CartItem key={p.id} {...p}/>)}

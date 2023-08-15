@@ -14,20 +14,17 @@ const ItemCount = ({stock, initial, onAdd}) => {
    function increment() {
       if(quantity < stock) {
          setQuatity(quantity + 1);
-         console.log("sumando " + "total= " + quantity)
       };
    };
 
    function decrement() {
       if(quantity > 1) {
          setQuatity(quantity - 1);
-         console.log("restando " + "total= " + quantity)
       };
    };
 
    function addCar() {
       onAdd(quantity)
-      console.log("adicionar al carrito " + "total= " + quantity)
    }
 
    //! Elemento que se retornara
