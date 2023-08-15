@@ -5,7 +5,15 @@ import CartItem from "../CartItem/CartItem"
 
 
 const Cart = () => {
-   const { cart, clearCart, totalQuantity, total} = useContext(CartContext)
+   const { cart, clearCart, totalQuantity} = useContext(CartContext)
+
+   
+   
+   let total = 0;
+   cart.forEach((p) => {
+    total += p.price * p.quantity;
+   });
+   
 
    if(totalQuantity === 0) {
       return (
@@ -17,7 +25,7 @@ const Cart = () => {
          )
    }
 
-
+ console.log("El total es: " + total)
    return (
       <div>
          {cart.map(p => <CartItem key={p.id} {...p}/>)}
@@ -25,8 +33,10 @@ const Cart = () => {
          <button onClick={() => clearCart()} className='Button'> Limpiar Carrito</button>
          <Link to='/checkout' className='Option'>Checkout</Link>
       </div>
-
+      
       )
+      
+      
 }
 
 export default Cart
