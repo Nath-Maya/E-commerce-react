@@ -1,56 +1,61 @@
 import React from "react";
-import ItemCount from "../ItemCount/ItemCount"
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import ItemCount from "../ItemCount/ItemCount";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
 import { useState } from "react";
-import { Link } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
+import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
-const ItemDetail = ({id,name,price,categoria,img,stock,description}) => {
-
+const ItemDetail = ({
+  id,
+  name,
+  price,
+  categoria,
+  img,
+  stock,
+  description,
+}) => {
   const [quantityAdded, setQuantityAdded] = useState(0);
 
-  const { addItem } = useContext(CartContext)
+  const { addItem } = useContext(CartContext);
 
   const onAdd = (quantity) => {
-    setQuantityAdded(quantity)
+    setQuantityAdded(quantity);
 
     const item = {
-      id, name, price
-    }
+      id,
+      name,
+      price,
+    };
 
+    addItem(item, quantity);
+  };
 
-    addItem(item, quantity)
-  }
+  return (
+    <Card style={{ width: "18rem" }}>
+      <Card.Body>
+        <Card.Title>{name}</Card.Title>
+        <Card.Img variant="top" src={img} />
+        <Card.Text>{description}</Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Categoria: {categoria}</ListGroup.Item>
+        <ListGroup.Item>Disponibles: {stock}</ListGroup.Item>
+        <ListGroup.Item>Precio: ${price} </ListGroup.Item>
+      </ListGroup>
+      <Card.Body>
+        {quantityAdded > 0 ? (
+          <Link to="/cart" className="Option">
+            <Button variant="outline-info">Terminar Compra</Button>
+          </Link>
+        ) : (
+          <ItemCount initial={1} stock={stock} onAdd={onAdd} />
+        )}
+      </Card.Body>
+    </Card>
+  );
+};
 
-   return (
-    <Card style={{ width: '18rem' }}>
-    <Card.Body>
-      <Card.Title>{name}</Card.Title>
-      <Card.Img variant="top" src={img} />
-      <Card.Text>
-        {description}
-      </Card.Text>
-    </Card.Body>
-    <ListGroup className="list-group-flush">
-      <ListGroup.Item>Categoria: {categoria}</ListGroup.Item>
-      <ListGroup.Item>Disponibles: {stock}</ListGroup.Item>
-      <ListGroup.Item>Precio: ${price} </ListGroup.Item>
-    </ListGroup>
-    <Card.Body>
-      {
-        quantityAdded > 0 ? 
-        (<Link to= '/cart' className='Option'>
-          <Button variant="outline-info">Terminar Compra</Button>
-          </Link>) : 
-          (<ItemCount initial={1} stock={stock} onAdd={onAdd}/>)
-      }
-    </Card.Body>
-
-  </Card>
-)
-}
-
-export default ItemDetail
+export default ItemDetail;
