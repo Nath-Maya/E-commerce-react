@@ -6,8 +6,6 @@ import { db } from '../../firebase/config.js'
 import { collection, getDocs} from 'firebase/firestore'
 
 
-
-
 function ItemListContainer(props) {
    const  [products,setProducts] = useState([])
    const { categoryId } = useParams()
@@ -20,13 +18,11 @@ function ItemListContainer(props) {
             setProducts(
                resp.docs.map((doc) => {
                   return { ...doc.data(), id: doc.id }
-               
-               })
+                })
                )
-
          })
    }, [categoryId]);
-
+   
    return (
       <div>
          <h1>{props.greeting}</h1>
