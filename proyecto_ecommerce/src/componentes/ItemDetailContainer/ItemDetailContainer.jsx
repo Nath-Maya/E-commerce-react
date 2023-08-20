@@ -9,7 +9,6 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 const ItemDetailContainer = () => {
 
    const [product, setProduct] = useState(null)
-   //Obtener el itemId de la URL
    const { itemId }   = useParams();
 
    useEffect(() => {

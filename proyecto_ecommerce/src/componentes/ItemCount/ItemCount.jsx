@@ -3,13 +3,10 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-//Estado donde se almacenara la cantidad del contador
+
 const ItemCount = ({stock, initial, onAdd}) => {
    const [quantity, setQuatity] = useState(initial)
    
-
-
-   //!Funciones de Incrementacion y Decrementacion
 
    function increment() {
       if(quantity < stock) {
@@ -26,8 +23,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
    function addCar() {
       onAdd(quantity)
    }
-
-   //! Elemento que se retornara
 
    return (
    <div>

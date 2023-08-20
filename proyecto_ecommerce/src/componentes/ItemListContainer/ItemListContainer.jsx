@@ -7,11 +7,9 @@ import { useParams } from 'react-router-dom'
 
 
 function ItemListContainer(props) {
-   //Estado donde se almacenaran los productos obtenidos de AsyncMock
    const  [products,setProducts] = useState([])
-   //Obtener el parametro categoryId de la URL 
    const { categoryId } = useParams()
-   // Cargar los productos al montar el componente o cuando cambia categoryId
+
    useEffect(() => {
       if (categoryId) {
       

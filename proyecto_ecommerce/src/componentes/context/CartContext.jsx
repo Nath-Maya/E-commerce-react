@@ -11,7 +11,7 @@ export const CarritoCompras = ({ children }) => {
       if(!isInCart(item.id)) {
          setCart((prev) => [...prev, { ...item, quantity }]);
       } else {
-         // console.log('El producto ya fue agregado' + item);
+         console.log('El producto ya fue agregado' + item);
       }
 }
 
