@@ -62,7 +62,7 @@ export const getProductById = (productoId) => {
    });
 }
 
-export const getProductsByCategory = (categoriaProducto) => {
+export const getProductsBycategoria = (categoriaProducto) => {
    return new Promise((resolve) => {
      setTimeout(() => {
       const productosCategoria = productos.filter(prod => prod.categoria == categoriaProducto)

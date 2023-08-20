@@ -21,12 +21,12 @@ const NavBar = () => {
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-2">
-          <NavLink className="navLink" to="/category/Accesorios">Accesorios</NavLink>
+          <NavLink className="navLink" to="/categoria/Accesorios">Accesorios</NavLink>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-3">
-        <NavLink  className="navLink"to="/category/Bicicletas">Bicicletas</NavLink>
+        <NavLink  className="navLink"to="/categoria/Bicicletas">Bicicletas</NavLink>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item className="item-car">
