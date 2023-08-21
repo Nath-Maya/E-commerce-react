@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import ListGroup from "react-bootstrap/ListGroup";
+import './ItemCount.css'
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [quantity, setQuatity] = useState(initial);
@@ -24,7 +25,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <div>
-      <ListGroup.Item>Cantidad: {quantity}</ListGroup.Item>
+      <ListGroup.Item className="text-cantidad">Cantidad: {quantity}</ListGroup.Item>
       <ButtonGroup aria-label="Basic example">
         <Button variant="secondary" onClick={decrement}>
           {" "}

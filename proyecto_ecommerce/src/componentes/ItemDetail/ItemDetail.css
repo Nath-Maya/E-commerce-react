@@ -1,0 +1,10 @@
+.item-detail-container {
+   display: flex;
+   justify-content: center;
+}
+
+.card-detail {
+   margin: 2rem;
+   font-family: 'Space Grotesk', sans-serif;
+}
+
