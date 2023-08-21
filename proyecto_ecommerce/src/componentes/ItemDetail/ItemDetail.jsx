@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import './ItemDetail.css'
+import "./ItemDetail.css";
 
 const ItemDetail = ({
   id,
@@ -36,7 +36,7 @@ const ItemDetail = ({
 
   return (
     <Card style={{ width: "20rem" }} border="info" className="card-detail">
-      <Card.Body >
+      <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Img variant="top" src={img} />
         <Card.Text>{description}</Card.Text>
@@ -49,7 +49,9 @@ const ItemDetail = ({
       <Card.Body>
         {quantityAdded > 0 ? (
           <Link to="/cart" className="Option">
-            <Button variant="dark" size="lg">Terminar Compra</Button>
+            <Button variant="dark" size="lg">
+              Terminar Compra
+            </Button>
           </Link>
         ) : (
           <ItemCount initial={1} stock={stock} onAdd={onAdd} />
