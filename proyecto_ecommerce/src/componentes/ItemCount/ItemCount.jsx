@@ -25,7 +25,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   return (
     <div>
-      <ListGroup.Item className="text-cantidad">Cantidad: {quantity}</ListGroup.Item>
+      <ListGroup.Item className="text-cantidad-detail">Cantidad: {quantity}</ListGroup.Item>
       <ButtonGroup aria-label="Basic example">
         <Button variant="secondary" onClick={decrement}>
           {" "}
