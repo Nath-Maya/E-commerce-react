@@ -1,8 +1,18 @@
-import { getDocs, addDoc ,collection, query, where, Timestamp, writeBatch, documentId } from "firebase/firestore";
-import { db } from '../../firebase/config'
-import {  useContext, useState } from "react";
+import {
+  getDocs,
+  addDoc,
+  collection,
+  query,
+  where,
+  Timestamp,
+  writeBatch,
+  documentId,
+} from "firebase/firestore";
+import { db } from "../../firebase/config";
+import { useContext, useState } from "react";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
 import { CartContext } from "../context/CartContext";
+import Swal from "sweetalert2";
 
 const Checkout = () => {
   const [cargando, setCargando] = useState(false);
@@ -41,7 +51,7 @@ const Checkout = () => {
 
       docs.forEach((doc) => {
         const dataDoc = doc.data();
-        const stockDb = dataDoc.stock
+        const stockDb = dataDoc.stock;
 
         const productoAgregadoCarrito = cart.find((prod) => prod.id === doc.id);
         const prodQuantity = productoAgregadoCarrito?.quantity;
@@ -49,7 +59,7 @@ const Checkout = () => {
         if (stockDb >= prodQuantity) {
           batch.update(doc.ref, { stock: stockDb - prodQuantity });
         } else {
-          agotadoStock.push({ id: doc.id, ...dataDoc});
+          agotadoStock.push({ id: doc.id, ...dataDoc });
         }
       });
 
@@ -70,22 +80,41 @@ const Checkout = () => {
     } finally {
       setCargando(false);
     }
-   }
-    if (cargando) {
-      return <h1>Se esta generando su orden...</h1>;
-    }
+  };
+  if (cargando) {
+    let timerInterval;
+    Swal.fire({
+      title: "Orden de Compra",
+      html: "Generando en <b></b> milliseconds.",
+      timer: 1000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+        const b = Swal.getHtmlContainer().querySelector("b");
+        timerInterval = setInterval(() => {
+          b.textContent = Swal.getTimerLeft();
+        }, 100);
+      },
+      willClose: () => {
+        clearInterval(timerInterval);
+      },
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log("I was closed by the timer");
+      }
+    });
+  }
 
-    if (ordenId) {
-      return <h1>El id de su orden es: {ordenId} </h1>;
-    }
+  if (ordenId) {
+    return <h1>El id de su orden es: {ordenId} </h1>;
+  }
 
-    return (
-      <div>
-        <h1>Checkout</h1>
-        <CheckoutForm onConfirm={crearOrden} />
-      </div>
-    );
-
+  return (
+    <div>
+      <h1>Checkout</h1>
+      <CheckoutForm onConfirm={crearOrden} />
+    </div>
+  );
 };
 
 export default Checkout;
