@@ -73,6 +73,11 @@ const Checkout = () => {
         setOrdenId(ordenAdd.id);
         clearCart();
       } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Hay productos fuera de stock",
+        });
         console.error("Hay productos que estan fuera de stock");
       }
     } catch (error) {
@@ -110,7 +115,7 @@ const Checkout = () => {
   }
 
   return (
-    <div>
+    <div className="container-checkout">
       <h1>Checkout</h1>
       <CheckoutForm onConfirm={crearOrden} />
     </div>

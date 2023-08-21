@@ -1,0 +1,18 @@
+.container-checkout {
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   align-items: center;
+   padding: 2rem;
+
+}
+
+.container-checkout h1 {
+   padding: 2rem;
+   font-family: 'Space Grotesk', sans-serif;
+}
+
+.form {
+   width: 100%;
+}
+

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import Form from "react-bootstrap/Form";
+import './CheckoutForm.css'
 
 const CheckoutForm = ({ onConfirm }) => {
   const [name, setName] = useState("");
@@ -54,8 +55,8 @@ const CheckoutForm = ({ onConfirm }) => {
             />
           </Form.Label>
         </Form.Group>
-        <div>
-          <Button variant="dark" type="submit">
+        <div className="btn-orden">
+          <Button variant="outline-dark" type="submit">
             Crear Orden
           </Button>
         </div>
