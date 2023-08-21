@@ -5,6 +5,8 @@ import CartItem from "../CartItem/CartItem";
 import CardGroup from "react-bootstrap/CardGroup";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import './Cart.css'
+
 
 const Cart = () => {
   const { cart, clearCart, totalQuantity } = useContext(CartContext);

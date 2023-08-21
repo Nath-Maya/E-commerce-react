@@ -44,12 +44,12 @@ const ItemDetail = ({
       <ListGroup className="list-group-flush">
         <ListGroup.Item>Categoria: {categoria}</ListGroup.Item>
         <ListGroup.Item>Disponibles: {stock}</ListGroup.Item>
-        <ListGroup.Item>Precio: ${price} </ListGroup.Item>
+        <ListGroup.Item>Precio: {price}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         {quantityAdded > 0 ? (
           <Link to="/cart" className="Option">
-            <Button variant="outline-info">Terminar Compra</Button>
+            <Button variant="dark" size="lg">Terminar Compra</Button>
           </Link>
         ) : (
           <ItemCount initial={1} stock={stock} onAdd={onAdd} />

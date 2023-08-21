@@ -1,0 +1,14 @@
+
+.productos-group a{
+   text-decoration: none;
+   color: black;
+}
+
+.productos-group a:hover{
+   color: white;
+   font-style: bold;
+}
+
+.productos-group button:hover {
+   scale: 1.07;
+}

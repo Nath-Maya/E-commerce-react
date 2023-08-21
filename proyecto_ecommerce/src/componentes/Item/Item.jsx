@@ -7,7 +7,8 @@ import './Item.css'
 
 const Item = ({id,name,img,price}) => {
 
-  let formatoPrecio= price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })
+  let formatoPrecio= price.toLocaleString("es-CO",{ style: "currency",
+   currency: "COP", minimumFractionDigits: 0, maximumFractionDigits: 0,})
 
    return (
       <Card className="card-container-item" style={{ width: '16rem' }}>

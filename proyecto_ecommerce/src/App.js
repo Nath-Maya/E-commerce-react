@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CarritoCompras } from "./componentes/context/CartContext";
 
+
 function App() {
   return (
     <BrowserRouter>
