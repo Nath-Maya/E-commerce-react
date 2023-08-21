@@ -10,7 +10,7 @@
    margin: 0.3rem;
 }
 
-.card:hover {
+.card-container-item:hover {
    box-shadow: 11px 11px 31px 0px rgba(118,150,145,1);
    scale: 1.02;
 }

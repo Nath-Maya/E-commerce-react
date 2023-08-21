@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
+import CardGroup from "react-bootstrap/CardGroup";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const Cart = () => {
   const { cart, clearCart, totalQuantity } = useContext(CartContext);
@@ -23,18 +26,30 @@ const Cart = () => {
   }
 
   return (
-    <div>
-      {cart.map((p) => (
-        <CartItem key={p.id} {...p} />
-      ))}
-      <h3>Total: ${total}</h3>
-      <button onClick={() => clearCart()} className="Button">
-        {" "}
-        Limpiar Carrito
-      </button>
-      <Link to="/checkout" className="Option">
-        Checkout
-      </Link>
+    <div className="productos-group">
+      <CardGroup>
+        {cart.map((p) => (
+          <CartItem key={p.id} {...p} />
+        ))}
+      </CardGroup>
+      <div className="modal show" style={{ display: "block", position: "initial" }} >
+        <Modal.Dialog>
+          <Modal.Header>
+            <Modal.Title>Total Compra</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>${total}</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="dark" onClick={() => clearCart()}>
+              Limpiar Carrito
+            </Button>{" "}
+            <Button variant="outline-info lg">Checkout
+              <Link to="/checkout" className="Option"/>
+             </Button>
+          </Modal.Footer>
+        </Modal.Dialog>
+      </div>
     </div>
   );
 };

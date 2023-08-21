@@ -10,7 +10,7 @@ const Item = ({id,name,img,price}) => {
   let formatoPrecio= price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })
 
    return (
-      <Card className="card-container" style={{ width: '16rem' }}>
+      <Card className="card-container-item" style={{ width: '16rem' }}>
          <Card.Img variant="top" src={img} />
          <Card.Body>
          <Card.Title className="name-detail">{name}</Card.Title>
