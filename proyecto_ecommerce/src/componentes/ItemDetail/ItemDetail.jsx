@@ -35,7 +35,7 @@ const ItemDetail = ({
   };
 
   return (
-    <Card style={{ width: "25rem" }} border="info" className="card-detail">
+    <Card style={{ width: "20rem" }} border="info" className="card-detail">
       <Card.Body >
         <Card.Title>{name}</Card.Title>
         <Card.Img variant="top" src={img} />

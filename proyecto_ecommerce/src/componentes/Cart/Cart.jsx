@@ -14,6 +14,7 @@ const Cart = () => {
     total += p.price * p.quantity;
   });
 
+
   if (totalQuantity === 0) {
     return (
       <div>
@@ -38,14 +39,14 @@ const Cart = () => {
             <Modal.Title>Total Compra</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <p>${total}</p>
+            <p>{total.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</p>
           </Modal.Body>
           <Modal.Footer>
             <Button variant="dark" onClick={() => clearCart()}>
               Limpiar Carrito
             </Button>{" "}
-            <Button variant="outline-info lg">Checkout
-              <Link to="/checkout" className="Option"/>
+            <Button variant="outline-info lg">
+              <Link to="/checkout" className="Option"> Checkout </Link>
              </Button>
           </Modal.Footer>
         </Modal.Dialog>

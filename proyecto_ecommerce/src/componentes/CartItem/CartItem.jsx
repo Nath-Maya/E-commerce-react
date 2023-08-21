@@ -7,6 +7,11 @@ import Button from "react-bootstrap/Button";
 const CartItem = ({ id, img, name, price, quantity }) => {
   const { removeItem } = useContext(CartContext);
 
+  let precioUnitario = price.toLocaleString("es-CO",{ style: "currency", currency: "COP", minimumFractionDigits: 0,  maximumFractionDigits: 0, })
+
+  let subtotal = price * quantity;
+
+
   return (
     <Card>
       <Card.Img variant="top" src={img}/>
@@ -14,15 +19,15 @@ const CartItem = ({ id, img, name, price, quantity }) => {
         <Card.Title>{name}</Card.Title>
         <Card.Text>
           <div className="item-details">
-            <p>Precio: ${price}</p>
+            <p>Precio: {precioUnitario}</p>
             <p>Cantidad: {quantity}</p>
-            <p>Total: ${price * quantity}</p>
+            <p>Total: {subtotal.toLocaleString("es-CO",{ style: "currency", currency: "COP", minimumFractionDigits: 0,  maximumFractionDigits: 0, })}</p>
           </div>{" "}
         </Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Button variant="outline-danger" nClick={() => removeItem(id)}>
-          <Link to={`/cart`} /> Eliminar
+        <Button variant="outline-danger" onClick={() => removeItem(id)}>
+          <Link to={`/cart`}> Eliminar </Link>
         </Button>
       </Card.Footer>
     </Card>
