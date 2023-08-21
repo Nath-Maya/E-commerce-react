@@ -1,3 +1,24 @@
 .CartWidget {
    width: 100%;
 }
+
+.cart-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   width: 3rem;
+}
+
+.cart-container:hover {
+   scale: 1.2;
+}
+
+.text-cantidad{
+   text-align: center;
+   padding: 3px;
+   font-size: 0.9rem;
+   color:darkslategrey;
+   margin: 2.5px;
+   font-weight: bold;
+}
