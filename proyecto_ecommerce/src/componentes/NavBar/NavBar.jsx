@@ -29,6 +29,11 @@ const NavBar = () => {
         <NavLink  className="navLink"to="/categoria/Bicicletas">Bicicletas</NavLink>
         </Nav.Link>
       </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-4">
+        <NavLink  className="navLink"to="/categoria/Ropa">Ropa</NavLink>
+        </Nav.Link>
+      </Nav.Item>
       <Nav.Item className="item-car">
         <CartWidget/>
       </Nav.Item>
