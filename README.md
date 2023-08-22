@@ -46,9 +46,9 @@ Es un e-commerce enfocado en productos para un publico objetivo, como personas q
 
 ### Demo:
 
+[Funcionamient](https://youtu.be/u3sW2AYRax0)
 
  
-
 <h3> 🛠 &nbsp;Tecnologías, Librerías & Lenguajes :</h3>
 
 <code><img height="100%" width='40' src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"/></code>
