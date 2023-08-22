@@ -24,9 +24,9 @@ const Cart = () => {
       {[
         'info',
       ].map((variant) => (
-        <Alert key={variant} variant={variant}>
+        <Alert key={variant} variant={variant} className="alert-carrito">
           No hay productos en el carrito! {' '}
-          <Alert.Link href="/">Ver mas productos</Alert.Link>. 
+          <Alert.Link href="/">Ver mas productos</Alert.Link>
         </Alert>
       ))}
     </>

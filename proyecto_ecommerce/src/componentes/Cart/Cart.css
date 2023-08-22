@@ -12,3 +12,11 @@
 .productos-group button:hover {
    scale: 1.07;
 }
+
+.alert-carrito {
+ margin-top: 15px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+}
