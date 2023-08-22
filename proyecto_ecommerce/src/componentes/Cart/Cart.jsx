@@ -6,6 +6,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import './Cart.css'
+import Alert from 'react-bootstrap/Alert';
 
 
 const Cart = () => {
@@ -17,14 +18,18 @@ const Cart = () => {
   });
 
 
-  if (totalQuantity === 0) {
+  if (total == 0) {
     return (
-      <div>
-        <h1> No hay items en el carrito </h1>
-        <Link to="/" className="Option">
-          Productos
-        </Link>
-      </div>
+    <>
+      {[
+        'info',
+      ].map((variant) => (
+        <Alert key={variant} variant={variant}>
+          No hay productos en el carrito! {' '}
+          <Alert.Link href="/">Ver mas productos</Alert.Link>. 
+        </Alert>
+      ))}
+    </>
     );
   }
 
